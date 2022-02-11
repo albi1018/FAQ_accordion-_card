@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   height: 80vh;
   background-color: #FFF;
   margin: 10rem auto 0;
@@ -31,5 +31,18 @@ body {
   color: black;
   text-align: center;
   text-transform: uppercase;
+}
+.container .faq .accordion {
+  margin-top: 2.5rem;
+  padding: 0 1rem;
+}
+.container .faq .accordion__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .faq .accordion__content .accordion__img {
+  height: 1rem;
+  margin-left: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

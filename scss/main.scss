@@ -16,7 +16,7 @@ body {font-family: 'Kumbh Sans', sans-serif;
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   height: 80vh;
   background-color: #FFF;
   margin: 10rem auto 0;
@@ -28,6 +28,26 @@ body {font-family: 'Kumbh Sans', sans-serif;
       color: black;
       text-align: center;
       text-transform: uppercase;
+    }
+
+    & .accordion {
+      margin-top: 2.5rem;
+      padding: 0 1rem;
+
+      &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .accordion__text {
+
+        }
+
+        & .accordion__img {
+          height: 1rem;
+          margin-left: 1rem;
+        }
+      }
     }
   }
 }

@@ -33,6 +33,9 @@ body {
   text-transform: uppercase;
 }
 .container .faq .accordion {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   margin-top: 2.5rem;
   padding: 0 1rem;
 }
@@ -40,9 +43,34 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1rem 0;
+  border-bottom: 1px solid #e7e7e9;
+}
+.container .faq .accordion__content .accordion__text {
+  color: #4a4b5e;
+  font-size: 1.2rem;
+}
+.container .faq .accordion__content .accordion__text .accordion__paragraph {
+  margin: 1rem 0;
+}
+.container .faq .accordion__content .accordion__text .accordion__paragraph.unshow {
+  display: none;
 }
 .container .faq .accordion__content .accordion__img {
-  height: 1rem;
-  margin-left: 1rem;
+  align-self: flex-start;
+  height: 0.9rem;
+  margin: 1.5rem 0 1rem 1rem;
+}
+.container .faq .accordion__content.active .accordion__text .accordion__paragraph.show {
+  font-weight: bold;
+}
+.container .faq .accordion__content.active .accordion__text .accordion__paragraph.unshow {
+  display: block;
+}
+.container .faq .accordion__content.active .accordion__img {
+  transform: rotate(180deg);
 }
 /*# sourceMappingURL=main.css.map */

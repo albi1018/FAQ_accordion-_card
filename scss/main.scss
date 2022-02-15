@@ -4,8 +4,7 @@ $VeryDarkDesaturatedBlue: hsl(238, 29%, 16%);
 $LightGrayishBlue: hsl(240, 5%, 91%);
 $SoftRed: hsl(14, 88%, 65%);
 
-
-                                    * {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -24,12 +23,25 @@ body {font-family: 'Kumbh Sans', sans-serif;
 
 .container {
   width: 90%;
-  height: 80vh;
   background-color: #FFF;
-  margin: 10rem auto 0;
+  margin: 15rem auto 5rem;
   border-radius: 2.5rem;
+
+  & .mobileDecoration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+
+    &__woman {
+      position: absolute;
+      top: -100px;
+      height: 17rem;
+    }
+  }
   & .faq {
-    padding: 15rem 0;
+    padding: 5rem 0 3rem;
     &__title {
       font-size: 3.5rem;
       color: black;
@@ -39,16 +51,16 @@ body {font-family: 'Kumbh Sans', sans-serif;
 
     & .accordion {
       display: flex;
-      flex-flow: column;
+      flex-direction: column;
       align-items: center;
       margin-top: 2.5rem;
       padding: 0 1rem;
 
       &__content {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        width: fit-content;
+        width: 100%;
         margin: 1rem 0;
         border-bottom: 1px solid $LightGrayishBlue;
 
@@ -87,6 +99,78 @@ body {font-family: 'Kumbh Sans', sans-serif;
 
         & .accordion__img {
          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    & .faq {
+      & .accordion {
+        padding: 0 1.5rem;
+        &__content {
+          & .accordion__text {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    & .faq {
+      & .accordion {
+        padding: 0 2rem;
+        &__content {
+          & .accordion__text {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .container {
+    & .mobileDecoration {
+      &__woman {
+        top: -130px;
+        height: 22rem;
+      }
+      &__pattern {
+        height: 12rem;
+      }
+    }
+
+    & .faq {
+      padding-top: 3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    & .mobileDecoration {
+      &__woman {
+        top: -145px;
+        height: 25rem;
+      }
+      &__pattern {
+        height: 14rem;
+      }
+    }
+    & .faq {
+      & .accordion {
+        padding: 0 3rem;
+        &__content {
+          & .accordion__text {
+            font-size: 1.6rem;
+          }
         }
       }
     }

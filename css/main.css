@@ -87,6 +87,10 @@ body {
   transform: rotate(180deg);
 }
 
+.footer {
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 320px) {
   .container .faq .accordion {
     padding: 0 1.5rem;

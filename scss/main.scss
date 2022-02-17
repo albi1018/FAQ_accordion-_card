@@ -23,6 +23,7 @@ body {font-family: 'Kumbh Sans', sans-serif;
 
 .container {
   width: 90%;
+  max-width: 1024px;
   background-color: #FFF;
   margin: 15rem auto 5rem;
   border-radius: 2.5rem;
@@ -39,6 +40,10 @@ body {font-family: 'Kumbh Sans', sans-serif;
       top: -100px;
       height: 17rem;
     }
+  }
+
+  & .desktopDecoration {
+    display: none;
   }
   & .faq {
     padding: 5rem 0 3rem;
@@ -170,6 +175,64 @@ body {font-family: 'Kumbh Sans', sans-serif;
         &__content {
           & .accordion__text {
             font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    & .mobileDecoration {
+      display: none;
+      &__woman {
+        top: -145px;
+        height: 25rem;
+      }
+      &__pattern {
+        height: 14rem;
+      }
+    }
+    & .desktopDecoration {
+      display: block;
+      width: 50%;
+      margin-top: 6rem;
+      &__woman {
+        position: absolute;
+        height: 36rem;
+        left: -100px;
+        z-index: 99;
+
+      }
+      &__pattern {
+        position: absolute;
+        width: 58rem;
+        left: -208px;
+        top: -49px;
+      }
+    }
+    & .faq {
+      width: 50%;
+      margin: 6rem 0;
+      padding: 0;
+      max-height: 36rem;
+      overflow: auto;
+      &__title {
+        text-align: left;
+      }
+      & .accordion {
+        margin-top: .5rem;
+        padding: 0 8rem 0 0;
+        cursor: pointer;
+        &__content {
+          margin: 0;
+          & .accordion__text {
+            padding: 1rem 0;
           }
         }
       }

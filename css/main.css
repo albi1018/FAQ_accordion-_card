@@ -18,6 +18,7 @@ body {
 
 .container {
   width: 90%;
+  max-width: 1024px;
   background-color: #FFF;
   margin: 15rem auto 5rem;
   border-radius: 2.5rem;
@@ -33,6 +34,9 @@ body {
   position: absolute;
   top: -100px;
   height: 17rem;
+}
+.container .desktopDecoration {
+  display: none;
 }
 .container .faq {
   padding: 5rem 0 3rem;
@@ -124,6 +128,62 @@ body {
   }
   .container .faq .accordion__content .accordion__text {
     font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .container .mobileDecoration {
+    display: none;
+  }
+  .container .mobileDecoration__woman {
+    top: -145px;
+    height: 25rem;
+  }
+  .container .mobileDecoration__pattern {
+    height: 14rem;
+  }
+  .container .desktopDecoration {
+    display: block;
+    width: 50%;
+    margin-top: 6rem;
+  }
+  .container .desktopDecoration__woman {
+    position: absolute;
+    height: 36rem;
+    left: -100px;
+    z-index: 99;
+  }
+  .container .desktopDecoration__pattern {
+    position: absolute;
+    width: 58rem;
+    left: -208px;
+    top: -49px;
+  }
+  .container .faq {
+    width: 50%;
+    margin: 6rem 0;
+    padding: 0;
+    max-height: 36rem;
+    overflow: auto;
+  }
+  .container .faq__title {
+    text-align: left;
+  }
+  .container .faq .accordion {
+    margin-top: 0.5rem;
+    padding: 0 8rem 0 0;
+    cursor: pointer;
+  }
+  .container .faq .accordion__content {
+    margin: 0;
+  }
+  .container .faq .accordion__content .accordion__text {
+    padding: 1rem 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
